@@ -1,0 +1,147 @@
+<!-- Validation failure messages -->
+<% if @granttable.errors.any? %>
+<% @granttable.errors.full_messages.each do |message| %>
+<div class="alert alert-dismissable alert-danger">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <%= message %>
+</div>
+<% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Granttable</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_granttable" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for grant_id -->
+      <div class="form-group">
+        <label for="grant_id" class="control-label">
+          Grant ID
+        </label>
+
+        <input type="text" id="grant_id" name="grant_id" placeholder="Grant" class="form-control" value="<%= @granttable.grant_id %>">
+      </div>
+
+      <!-- Label and input for field -->
+      <!-- This must be a string -->
+      <!---This is the names of the 4 possible research fields------->
+      <!-- ------Original code Begin ------->
+      <!-- <div class="form-group">
+      <label for="field" class="control-label">
+      Research Field
+    </label>
+    <input type="text" id="field" name="field" placeholder="Field" class="form-control" value="<%= @granttable.field %>">
+  </div> -->
+  <!-- Original code End   -->
+
+  <!-- Begin: HM  -->
+  <div class="form-group">
+    <label for="field" class="control-label">
+      Research Field
+    </label>
+
+    <div class="form-control">
+      <%= select_tag "field", options_for_select( [
+        "    ",
+        "Social Science",
+        "Natural Science",
+        "Formal Science",
+        "Professions"], :class => "form-control") %>
+    </div>
+  </div>
+  <!-- End: HM  -->
+
+
+  <!-- Label and input for field_id -->
+  <div class="form-group">
+    <label for="field_id" class="control-label">
+      Research Field ID
+    </label>
+    <input type="text" id="field_id" name="field_id" placeholder="Field ID" class="form-control" value="<%= @granttable.field_id %>">
+  </div>
+
+
+
+
+
+  <!-- Label and input for research_need -->
+  <!-- ------Original code Begin ------->
+  <!-- <div class="form-group">
+  <label for="research_need" class="control-label">
+  Research Need
+</label>
+
+<input type="text" id="research_need" name="research_need" placeholder="Research need" class="form-control" value="<%= @granttable.research_need %>">
+</div> -->
+<!-- Original code End   -->
+
+<!-- Beign: HM  -->
+<div class="form-group">
+  <label for="research_need" class="control-label">
+    Research Need
+  </label>
+  <div class="form-control">
+    <%= select_tag "research_need", options_for_select( [
+      "1 = Looking for $",
+      "2 = I have $ but I am looking for collaboration",
+      "3 = I am looking for collaboration"], :class => "form-control") %>
+    </div>
+  </div>
+<!-- End: HM  -->
+
+
+
+
+
+
+
+
+<!-- Label and input for grant_amt -->
+<div class="form-group">
+  <label for="grant_amt" class="control-label">
+    Grant Amount
+  </label>
+
+  <input type="text" id="grant_amt" name="grant_amt" placeholder="Grant amt" class="form-control" value="<%= @granttable.grant_amt %>">
+</div>
+
+<!-- Label and input for title -->
+<div class="form-group">
+  <label for="title" class="control-label">
+    Title
+  </label>
+
+  <input type="text" id="title" name="title" placeholder="Title" class="form-control" value="<%= @granttable.title %>">
+</div>
+
+<!-- Label and input for abstract -->
+<div class="form-group">
+  <label for="abstract" class="control-label">
+    Abstract
+  </label>
+
+  <input type="text" id="abstract" name="abstract" placeholder="Abstract" class="form-control" value="<%= @granttable.abstract %>">
+</div>
+
+<!-- Label and input for more_details -->
+<div class="form-group">
+  <label for="more_details" class="control-label">
+    More details
+  </label>
+
+  <input type="text" id="more_details" name="more_details" placeholder="More details" class="form-control" value="<%= @granttable.more_details %>">
+</div>
+
+<button class="btn btn-success">
+  Create Granttable
+</button>
+or
+<a href="/granttables">Cancel</a>
+</form>
+</div>
+</div>

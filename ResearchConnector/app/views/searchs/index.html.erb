@@ -1,0 +1,92 @@
+<div class="page-header">
+  <h1>
+    Search
+  </h1>
+</div>
+
+
+<%= search_form_for @q do |f| %>
+<p class="lead">Narrow results:</p>
+
+<div class="form-group">
+  <div class="form-control">
+    <!-- <%= f.label :title_cont, "Title containing" %> -->
+    <%= f.select :field_cont, ["Social Science","Natural Science","Formal Science","Professions"], :class => "form-control"  %>
+  </div>
+
+  <%= f.submit :class => "btn btn-primary btn-block" %>
+
+  <a href="/searchs" class="btn btn-default btn-block">Clear filters</a>
+  <% end %>
+
+</div>
+
+<br>
+<hr>
+<br>
+
+
+<div class="form-group">
+  <select class="form-control">
+    <option>1</option>
+    <option>Social Science</option>
+    <option>Natural Science</option>
+    <option>Formal Science</option>
+    <option>Professions</option>
+  </select>
+</div><br>
+
+<div class="form-group">
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+      1. Looking for $
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+      2. Have $ and looking for collaboration
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+      3. Looking for collaboration
+    </label>
+  </div>
+</div>
+
+<button type="submit" class="btn btn-lg btn-block btn-primary">Submit</button>
+
+
+
+<!-- Begin: Alternate Test code -->
+<!-- <div class="form-group">
+<label for="field" class="control-label">
+Research Field
+</label>
+<div class="form-control">
+<%= select_tag "field", options_for_select( [
+"    ",
+"Social Science",
+"Natural Science",
+"Formal Science",
+"Professions"], :class => "form-control") %>
+</div>
+</div>
+<br>
+
+<form>
+<input type="radio" name="optradio" id="1" value="1">
+<label for="male">1. Looking for $</label><br>
+
+<input type="radio" name="optradio" id="2" value="2">
+<label for="female">2. Have $ and looking for collaboration</label><br>
+
+<input type="radio" name="optradio" id="3" value="3">
+<label for="other">3. Looking for collaboration</label><br><br>
+
+<input type="submit" value="SUBMIT SEARCH">
+</form> -->
+<!-- End: Alternate Test code -->

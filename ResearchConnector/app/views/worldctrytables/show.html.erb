@@ -1,0 +1,31 @@
+<div class="page-header">
+  <h3>Worldctrytable #<%= @worldctrytable.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Cor</dt>
+      <dd><%= @worldctrytable.COR_id %></dd>
+
+      <dt>Cor</dt>
+      <dd><%= @worldctrytable.COR %></dd>
+
+      <dt>Cor foreignkey</dt>
+      <dd><%= @worldctrytable.COR_foreignkey %></dd>
+
+    </dl>
+
+    <div class="btn-group btn-group-justified">
+      <a href="/worldctrytables" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/worldctrytables/<%= @worldctrytable.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_worldctrytable/<%= @worldctrytable.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

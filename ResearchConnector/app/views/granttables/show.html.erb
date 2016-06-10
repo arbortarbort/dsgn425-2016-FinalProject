@@ -1,0 +1,48 @@
+<div class="page-header">
+  <h3>Granttable #<%= @granttable.id %></h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <dl class="dl-horizontal">
+      <dt>Grant ID</dt>
+      <dd><%= @granttable.grant_id %></dd>
+
+      <dt>Research Field</dt>
+      <dd><%= @granttable.field %></dd>
+
+      <dt>Research Field ID</dt>
+      <dd><%= @granttable.field_id %></dd>
+
+      <dt>Research Need</dt>
+      <dd><%= @granttable.research_need %></dd>
+
+      <dt>Grant Amount</dt>
+      <dd><%= @granttable.grant_amt %></dd>
+
+      <dt>Title</dt>
+      <dd><%= @granttable.title %></dd>
+
+      <dt>Abstract</dt>
+      <dd><%= @granttable.abstract %></dd>
+
+      <dt>More details</dt>
+      <dd><%= @granttable.more_details %></dd>
+
+      <dt>Email Address</dt>
+      <dd><%= current_user.email %></dd>
+
+
+    <div class="btn-group btn-group-justified">
+      <a href="/granttables" class="btn btn-primary">
+        Back
+      </a>
+      <a href="/granttables/<%= @granttable.id %>/edit" class="btn btn-warning">
+        Edit
+      </a>
+      <a href="/delete_granttable/<%= @granttable.id %>" class="btn btn-danger" rel="nofollow">
+        Delete
+      </a>
+    </div>
+  </div>
+</div>

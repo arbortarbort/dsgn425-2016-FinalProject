@@ -1,0 +1,202 @@
+
+COR_id,COR,COR_foreignkey
+1,Algeria,1
+2,Egypt,2
+3,Libyan Arab Jamahiriya,3
+4,Morocco,4
+5,Tunisia,5
+6,Western Sahara,6
+7,Eastern Africa,7
+8,Burundi,8
+9,Comoros,9
+10,Djibouti,10
+11,Eritrea,11
+12,Ethiopia,12
+13,Kenya,13
+14,Madagascar,14
+15,Malawi,15
+16,Mauritius,16
+17,Mayotte,17
+18,Mozambique,18
+19,Runion,19
+20,Rwanda,20
+21,Somalia,21
+22,Sudan a,22
+23,Uganda,23
+24,United Republic of Tanzania,24
+25,Zambia,25
+26,Zimbabwe,26
+27,Middle Africa,27
+28,Angola,28
+29,Cameroon,29
+30,Central African Republic,30
+31,Chad,31
+32,Congo,32
+33,Democratic Republic of the Congo,33
+34,Equatorial Guinea,34
+35,Gabon,35
+36,Sao Tome and Principe,36
+37,Southern Africa,37
+38,Botswana,38
+39,Lesotho,39
+40,Namibia,40
+41,South Africa,41
+42,Swaziland,42
+43,Western Africa,43
+44,Benin,44
+45,Burkina Faso,45
+46,Cape Verde,46
+47,Cote d'Ivoire,47
+48,Gambia,48
+49,Ghana,49
+50,Guinea,50
+51,Guinea-Bissau,51
+52,Liberia,52
+53,Mali,53
+54,Mauritania,54
+55,Niger,55
+56,Nigeria,56
+57,Senegal,57
+58,Sierra Leone,58
+59,Togo,59
+60,Fiji,60
+61,French Polynesia,61
+62,Guam,62
+63,Micronesia (Federated States of),63
+64,New Caledonia,64
+65,Papua New Guinea,65
+66,Samoa,66
+67,Solomon Islands,67
+68,Tonga,68
+69,Vanuatu,69
+70,Albania d,70
+71,Belarus,71
+72,Bosnia and Herzegovina d,72
+73,Bulgaria,73
+74,Croatia d,74
+75,Czech Republic,75
+76,Estonia e,76
+77,Greece d,77
+78,Hungary,78
+79,Latvia e,79
+80,Lithuania e,80
+81,Montenegro d,81
+82,Poland,82
+83,Republic of Moldova,83
+84,Romania,84
+85,Russian Federation,85
+86,Serbia d,86
+87,Slovakia,87
+88,Slovenia d,88
+89,The former Yugoslav Republic of Macedonia d,89
+90,Ukraine,90
+91,Austria,91
+92,Belgium,92
+93,Channel Islands e,93
+94,Denmark e,94
+95,Finland e,95
+96,France,96
+97,Germany,97
+98,Iceland e,98
+99,Ireland e,99
+100,Italy d,100
+101,Luxembourg,101
+102,Malta d,102
+103,Netherlands,103
+104,Norway e,104
+105,Portugal d,105
+106,Spain d,106
+107,Sweden e,107
+108,Switzerland,108
+109,United Kingdom of Great Britain and Northern Ireland e,109
+110,Australia f,110
+111,Canada g,111
+112,Japan h,112
+113,New Zealand f,113
+114,United States of America g,114
+115,Kazakhstan c,115
+116,Kyrgyzstan c,116
+117,Tajikistan c,117
+118,Turkmenistan c,118
+119,Uzbekistan c,119
+120,China,120
+121,"China, Hong Kong Special Administrative Region",121
+122,"China, Macao Special Administrative Region",122
+123,Democratic People's Republic of Korea,123
+124,Mongolia,124
+125,Republic of Korea,125
+126,Brunei Darussalam,126
+127,Cambodia,127
+128,Indonesia,128
+129,Lao People's Democratic Republic,129
+130,Malaysia,130
+131,Myanmar,131
+132,Philippines,132
+133,Singapore,133
+134,Thailand,134
+135,Timor-Leste,135
+136,Viet Nam,136
+137,Afghanistan,137
+138,Bangladesh,138
+139,Bhutan,139
+140,India,140
+141,Iran (Islamic Republic of),141
+142,Maldives,142
+143,Nepal,143
+144,Pakistan,144
+145,Sri Lanka,145
+146,Armenia c,146
+147,Azerbaijan c,147
+148,Bahrain,148
+149,Cyprus,149
+150,Georgia c,150
+151,Iraq,151
+152,Israel,152
+153,Jordan,153
+154,Kuwait,154
+155,Lebanon,155
+156,Occupied Palestinian Territory,156
+157,Oman,157
+158,Qatar,158
+159,Saudi Arabia,159
+160,Syrian Arab Republic,160
+161,Turkey,161
+162,United Arab Emirates,162
+163,Yemen,163
+164,Aruba,164
+165,Bahamas,165
+166,Barbados,166
+167,Cuba,167
+168,Dominican Republic,168
+169,Grenada,169
+170,Guadeloupe,170
+171,Haiti,171
+172,Jamaica,172
+173,Martinique,173
+174,Netherlands Antilles,174
+175,Puerto Rico,175
+176,Saint Lucia,176
+177,Saint Vincent and the Grenadines,177
+178,Trinidad and Tobago,178
+179,United States Virgin Islands,179
+180,Belize,180
+181,Costa Rica,181
+182,El Salvador,182
+183,Guatemala,183
+184,Honduras,184
+185,Mexico,185
+186,Nicaragua,186
+187,Panama,187
+188,Argentina,188
+189,Bolivia (Plurinational State of),189
+190,Brazil,190
+191,Chile,191
+192,Colombia,192
+193,Ecuador,193
+194,French Guiana,194
+195,Guyana,195
+196,Paraguay,196
+197,Peru,197
+198,Suriname,198
+199,Uruguay,199
+200,Venezuela (Bolivarian Republic of),200

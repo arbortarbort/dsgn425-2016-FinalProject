@@ -1,0 +1,55 @@
+<!-- Validation failure messages -->
+<% if @africanctrytable.errors.any? %>
+  <% @africanctrytable.errors.full_messages.each do |message| %>
+    <div class="alert alert-dismissable alert-danger">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= message %>
+    </div>
+  <% end %>
+<% end %>
+
+<div class="page-header">
+  <h3>Add Africanctrytable</h3>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <form action="/create_africanctrytable" method="post">
+      <!-- Hidden input for authenticity token to protect from forgery -->
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+
+      <!-- Label and input for AAC_id -->
+      <div class="form-group">
+        <label for="AAC_id" class="control-label">
+          Aac
+        </label>
+
+        <input type="text" id="AAC_id" name="AAC_id" placeholder="Aac" class="form-control" value="<%= @africanctrytable.AAC_id %>">
+      </div>
+
+      <!-- Label and input for AAC -->
+      <div class="form-group">
+        <label for="AAC" class="control-label">
+          Aac
+        </label>
+
+        <input type="text" id="AAC" name="AAC" placeholder="Aac" class="form-control" value="<%= @africanctrytable.AAC %>">
+      </div>
+
+      <!-- Label and input for AAC_foreignkey -->
+      <div class="form-group">
+        <label for="AAC_foreignkey" class="control-label">
+          Aac foreignkey
+        </label>
+
+        <input type="text" id="AAC_foreignkey" name="AAC_foreignkey" placeholder="Aac foreignkey" class="form-control" value="<%= @africanctrytable.AAC_foreignkey %>">
+      </div>
+
+      <button class="btn btn-success">
+        Create Africanctrytable
+      </button>
+      or
+      <a href="/africanctrytables">Cancel</a>
+    </form>
+  </div>
+</div>

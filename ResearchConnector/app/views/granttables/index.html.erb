@@ -1,0 +1,57 @@
+<div class="page-header">
+  <h1>
+    Granttables
+    <a href="/granttables/new" class="btn btn-lg btn-success">New Granttable</a>
+  </h1>
+</div>
+
+<%= search_form_for @q do |f| %>
+  <p class="lead">Narrow results:</p>
+
+  <div class="form-group">
+    <%= f.label :title_cont, "Title containing" %>
+    <%= f.select :field_cont, ["Social Science","Natural Science",'nas'], :class => "form-control"  %>
+  </div>
+
+
+  <%= f.submit :class => "btn btn-primary btn-block" %>
+
+  <a href="/movies" class="btn btn-default btn-block">Clear filters</a>
+<% end %>
+
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped table-hover">
+      <tr>
+        <th>Grant</th>
+        <th>Research Field</th>
+        <th>Research Field ID</th>
+        <th>Research Need</th>
+        <th>Grant Amount</th>
+        <th>Title</th>
+        <th>Abstract</th>
+        <th>Actions</th>
+      </tr>
+
+      <% @granttables.each do |granttable| %>
+      <tr>
+        <td><%= granttable.grant_id %></td>
+        <td><%= granttable.field %></td>
+        <td><%= granttable.field_id %></td>
+        <td><%= granttable.research_need %></td>
+        <td><%= granttable.grant_amt %></td>
+        <td><%= granttable.title %></td>
+        <td><%= granttable.abstract %></td>
+        <td>
+          <a href="/granttables/<%= granttable.id %>" class="btn btn-primary">Show More Details</a>
+          <a href="/granttables/<%= granttable.id %>/edit" class="btn btn-warning">Edit</a>
+          <a href="/delete_granttable/<%= granttable.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
