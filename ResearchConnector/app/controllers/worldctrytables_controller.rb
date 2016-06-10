@@ -18,7 +18,7 @@ class WorldctrytablesController < ApplicationController
     @worldctrytable.COR_foreignkey = params[:COR_foreignkey]
 
     if @worldctrytable.save
-      redirect_to "/worldctrytables", :notice => "Worldctrytable created successfully."
+      redirect_to "/worldctrytables", :notice => "Country created successfully."
     else
       render 'new'
     end
@@ -36,7 +36,7 @@ class WorldctrytablesController < ApplicationController
     @worldctrytable.COR_foreignkey = params[:COR_foreignkey]
 
     if @worldctrytable.save
-      redirect_to "/worldctrytables", :notice => "Worldctrytable updated successfully."
+      redirect_to "/worldctrytables", :notice => "Country updated successfully."
     else
       render 'edit'
     end
@@ -46,7 +46,8 @@ class WorldctrytablesController < ApplicationController
     @worldctrytable = Worldctrytable.find(params[:id])
 
     @worldctrytable.destroy
+    # Worldctrytable.destroy_all 
 
-    redirect_to "/worldctrytables", :notice => "Worldctrytable deleted."
+    redirect_to "/worldctrytables", :notice => "Country deleted."
   end
 end
