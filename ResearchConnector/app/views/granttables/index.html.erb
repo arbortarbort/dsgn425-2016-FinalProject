@@ -1,26 +1,20 @@
 <div class="page-header">
   <h1>
-    Granttables
-    <a href="/granttables/new" class="btn btn-lg btn-success">New Granttable</a>
+    Opportunities
+    <br>
+    <br>
+    <a href="/granttables/new" class="btn btn-lg btn-block btn-success">New Opportunity</a>
   </h1>
 </div>
 
-<%= search_form_for @q do |f| %>
-  <p class="lead">Narrow results:</p>
-
-  <div class="form-group">
-    <%= f.label :title_cont, "Title containing" %>
-    <%= f.select :field_cont, ["Social Science","Natural Science",'nas'], :class => "form-control"  %>
-  </div>
-
-
-  <%= f.submit :class => "btn btn-primary btn-block" %>
-
-  <a href="/movies" class="btn btn-default btn-block">Clear filters</a>
-<% end %>
 
 
 
+
+
+<br>
+<br>
+<br>
 
 <div class="row">
   <div class="col-md-12">

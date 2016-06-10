@@ -25,7 +25,7 @@ class GranttablesController < ApplicationController
     @granttable.more_details = params[:more_details]
 
     if @granttable.save
-      redirect_to "/granttables", :notice => "Granttable created successfully."
+      redirect_to "/granttables", :notice => "Opportunity created successfully."
     else
       render 'new'
     end
@@ -48,7 +48,7 @@ class GranttablesController < ApplicationController
     @granttable.more_details = params[:more_details]
 
     if @granttable.save
-      redirect_to "/granttables", :notice => "Granttable updated successfully."
+      redirect_to "/granttables", :notice => "Opportunity updated successfully."
     else
       render 'edit'
     end

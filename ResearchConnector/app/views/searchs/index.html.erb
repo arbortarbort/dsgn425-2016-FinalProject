@@ -1,92 +1,110 @@
 <div class="page-header">
   <h1>
-    Search
+    Advanced Search Filter
   </h1>
 </div>
 
 
-<%= search_form_for @q do |f| %>
-<p class="lead">Narrow results:</p>
 
+<br>
+<br>
+<br>
+
+
+<!-- program -->
 <div class="form-group">
-  <div class="form-control">
-    <!-- <%= f.label :title_cont, "Title containing" %> -->
-    <%= f.select :field_cont, ["Social Science","Natural Science","Formal Science","Professions"], :class => "form-control"  %>
-  </div>
-
-  <%= f.submit :class => "btn btn-primary btn-block" %>
-
-  <a href="/searchs" class="btn btn-default btn-block">Clear filters</a>
-  <% end %>
-
+  <label for="program" class="control-label">
+    <h6>
+      Program
+    </h6>
+  </label>
+  <select class="form-control" name="user[program]">
+    <option>MMM</option>
+    <option>2Y FT MBA</option>
+    <option>1Y FT MBA</option>
+    <option>JD-MBA</option>
+    <option>PT MBA</option>
+  </select>
 </div>
-
 <br>
-<hr>
 <br>
 
-
+<!-- gradyear -->
 <div class="form-group">
+  <label for="gradyear" class="control-label">
+    <h6>
+      Graduation Year
+    </h6>
+  </label>
+  <select class="form-control" name="user[gradyear]">
+    <option>2016</option>
+    <option>2017</option>
+    <option>2018</option>
+    <option>2019</option>
+  </select>
+</div>
+<br>
+<br>
+
+<!-- Research Field -->
+<%= search_form_for @q do |f| %>
+<div class="form-group">
+  <label for="field_id" class="control-label">
+    <h6>
+      Research Field
+    </h6>
+  </label>
   <select class="form-control">
-    <option>1</option>
+    <option></option>
     <option>Social Science</option>
     <option>Natural Science</option>
     <option>Formal Science</option>
     <option>Professions</option>
   </select>
-</div><br>
-
-<div class="form-group">
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-      1. Looking for $
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      2. Have $ and looking for collaboration
-    </label>
-  </div>
-  <div class="radio">
-    <label>
-      <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-      3. Looking for collaboration
-    </label>
-  </div>
 </div>
-
-<button type="submit" class="btn btn-lg btn-block btn-primary">Submit</button>
-
-
-
-<!-- Begin: Alternate Test code -->
-<!-- <div class="form-group">
-<label for="field" class="control-label">
-Research Field
-</label>
-<div class="form-control">
-<%= select_tag "field", options_for_select( [
-"    ",
-"Social Science",
-"Natural Science",
-"Formal Science",
-"Professions"], :class => "form-control") %>
-</div>
-</div>
+<% end %>
+<br>
 <br>
 
-<form>
-<input type="radio" name="optradio" id="1" value="1">
-<label for="male">1. Looking for $</label><br>
 
-<input type="radio" name="optradio" id="2" value="2">
-<label for="female">2. Have $ and looking for collaboration</label><br>
 
-<input type="radio" name="optradio" id="3" value="3">
-<label for="other">3. Looking for collaboration</label><br><br>
 
-<input type="submit" value="SUBMIT SEARCH">
-</form> -->
-<!-- End: Alternate Test code -->
+<%= search_form_for @q do |f| %>
+<div class="form-group">
+  <h6>
+    Research Field
+  </h6>
+  <!-- <%= f.label :title_cont, "Title containing" %> -->
+  <%= f.select :field_cont, ['', "Social Science","Natural Science",'Formal Science', 'Professions'], :class => "form-control"  %>
+</div>
+<%= f.submit :class => "btn btn-primary btn-block" %>
+<a href="/searchs" class="btn btn-default btn-block">Clear Filters 1</a>
+<% end %>
+
+
+<%= search_form_for @q do |f| %>
+<div class="form-group">
+  <h6>
+    Field ID
+  </h6>
+  <!-- <%= f.label :title_cont, "Title containing" %> -->
+
+  <%= f.select :field_cont, [' ', '1','2','3'], :class => "form-control"  %>
+</div>
+<%= f.submit :class => "btn btn-primary btn-block" %>
+<a href="/searchs" class="btn btn-default btn-block">Clear Filters 1</a>
+<% end %>
+
+
+
+<!--
+<div class="">
+<p>
+<button type="submit" class="btn btn-lg btn-block btn-primary">Submit 2</button>
+<a href="/searchs" class="btn btn-default">Reset Filters</a>
+<a href="/granttables" class="btn btn-warning">Cancel Search</a>
+<br>
+<br>
+<br>
+</p>
+</div> -->
