@@ -9,7 +9,7 @@
 <% end %>
 
 <div class="page-header">
-  <h3>Edit Africanctrytable #<%= @africanctrytable.id %></h3>
+  <h3>Edit List of African Countries #<%= @africanctrytable.id %></h3>
 </div>
 
 <div class="row">
@@ -21,7 +21,7 @@
       <!-- Label and input for AAC_id -->
       <div class="form-group">
         <label for="AAC_id" class="control-label">
-          Aac
+          Country ID
         </label>
 
         <input type="text" id="AAC_id" name="AAC_id" placeholder="Aac" class="form-control" value="<%= @africanctrytable.AAC_id %>">
@@ -30,7 +30,7 @@
       <!-- Label and input for AAC -->
       <div class="form-group">
         <label for="AAC" class="control-label">
-          Aac
+          Country Name
         </label>
 
         <input type="text" id="AAC" name="AAC" placeholder="Aac" class="form-control" value="<%= @africanctrytable.AAC %>">
@@ -39,14 +39,14 @@
       <!-- Label and input for AAC_foreignkey -->
       <div class="form-group">
         <label for="AAC_foreignkey" class="control-label">
-          Aac foreignkey
+          Foreign key
         </label>
 
         <input type="text" id="AAC_foreignkey" name="AAC_foreignkey" placeholder="Aac foreignkey" class="form-control" value="<%= @africanctrytable.AAC_foreignkey %>">
       </div>
 
       <button class="btn btn-warning">
-        Update Africanctrytable
+        Update Country Details
       </button>
       or
       <a href="/africanctrytables/<%= @africanctrytable.id %>">Cancel</a>
