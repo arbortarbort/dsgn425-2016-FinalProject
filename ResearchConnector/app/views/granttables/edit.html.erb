@@ -43,15 +43,6 @@
         </div>
       </div>
 
-      <!-- Label and input for field_id -->
-      <div class="form-group">
-        <label for="field_id" class="control-label">
-          Research Field ID
-        </label>
-
-        <input type="text" id="field_id" name="field_id" placeholder="Field" class="form-control" value="<%= @granttable.field_id %>">
-      </div>
-
       <!-- Label and input for research_need -->
       <div class="form-group">
         <label for="research_need" class="control-label">
@@ -59,8 +50,8 @@
         </label>
         <div class="form-control">
           <%= select_tag "research_need", options_for_select( [
-            "1 = Looking for $",
-            "2 = I have $ but I am looking for collaboration",
+            "1 = Looking for funding ($)",
+            "2 = I have funding ($) but I am looking for collaboration",
             "3 = I am looking for collaboration"], :class => "form-control") %>
           </div>
         </div>

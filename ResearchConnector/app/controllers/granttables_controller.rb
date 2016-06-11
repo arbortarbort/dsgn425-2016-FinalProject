@@ -61,4 +61,8 @@ class GranttablesController < ApplicationController
 
     redirect_to "/granttables", :notice => "Granttable deleted."
   end
+
+  def year_gteq
+    @granttable = "this is a test"
+  end
 end

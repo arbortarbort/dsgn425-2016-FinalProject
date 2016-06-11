@@ -5,106 +5,48 @@
 </div>
 
 
-
 <br>
 <br>
 <br>
 
 
-<!-- program -->
-<div class="form-group">
-  <label for="program" class="control-label">
-    <h6>
-      Program
-    </h6>
-  </label>
-  <select class="form-control" name="user[program]">
-    <option>MMM</option>
-    <option>2Y FT MBA</option>
-    <option>1Y FT MBA</option>
-    <option>JD-MBA</option>
-    <option>PT MBA</option>
-  </select>
-</div>
-<br>
-<br>
-
-<!-- gradyear -->
-<div class="form-group">
-  <label for="gradyear" class="control-label">
-    <h6>
-      Graduation Year
-    </h6>
-  </label>
-  <select class="form-control" name="user[gradyear]">
-    <option>2016</option>
-    <option>2017</option>
-    <option>2018</option>
-    <option>2019</option>
-  </select>
-</div>
-<br>
-<br>
-
-<!-- Research Field -->
+<!-- ################################# -->
 <%= search_form_for @q do |f| %>
+
 <div class="form-group">
-  <label for="field_id" class="control-label">
-    <h6>
-      Research Field
-    </h6>
-  </label>
-  <select class="form-control">
-    <option></option>
-    <option>Social Science</option>
-    <option>Natural Science</option>
-    <option>Formal Science</option>
-    <option>Professions</option>
-  </select>
+  <%= f.label :title_cont, "Title containing" %>
+  <%= f.text_field :title_cont, :class => "form-control", :placeholder => "Enter a few words [Max characters: 1000]" %>
 </div>
-<% end %>
 <br>
 <br>
 
-
-
-
-<%= search_form_for @q do |f| %>
 <div class="form-group">
+  <%= f.label :research_need_eq, "Research Opportunity Needed" %>
+  <%= f.text_field :research_need_eq, :class => "form-control", :placeholder => "Enter 1, 2 or 3. [1=Looking for funding($) , 2=I have funding ($) but I am looking for collaboration, 3=I am looking for collaboration]" %>
+</div>
+<br>
+<br>
+
+<div class="form-group">
+  <%= f.label :grant_amt_lteq, "Grant Amount less than" %>
+  <%= f.text_field :grant_amt_lteq, :class => "form-control " ,  :placeholder => "Enter a Grant amount less than or equal to Eg. 10,234" %>
+</div>
+<br>
+<br>
+
+<div class="form-group dropdown">
   <h6>
     Research Field
   </h6>
   <!-- <%= f.label :title_cont, "Title containing" %> -->
-  <%= f.select :field_cont, ['', "Social Science","Natural Science",'Formal Science', 'Professions'], :class => "form-control"  %>
+  <%= f.select :field_cont, ['', "Social Science","Natural Science",'Formal Science', 'Professions'], :class => "form-control form-horizontal"  %>
 </div>
+<br>
+<br>
+
 <%= f.submit :class => "btn btn-primary btn-block" %>
-<a href="/searchs" class="btn btn-default btn-block">Clear Filters 1</a>
+
+<a href="/searchs" class="btn btn-default btn-block">Clear Filters</a>
 <% end %>
 
-
-<%= search_form_for @q do |f| %>
-<div class="form-group">
-  <h6>
-    Field ID
-  </h6>
-  <!-- <%= f.label :title_cont, "Title containing" %> -->
-
-  <%= f.select :field_cont, [' ', '1','2','3'], :class => "form-control"  %>
-</div>
-<%= f.submit :class => "btn btn-primary btn-block" %>
-<a href="/searchs" class="btn btn-default btn-block">Clear Filters 1</a>
-<% end %>
-
-
-
-<!--
-<div class="">
-<p>
-<button type="submit" class="btn btn-lg btn-block btn-primary">Submit 2</button>
-<a href="/searchs" class="btn btn-default">Reset Filters</a>
-<a href="/granttables" class="btn btn-warning">Cancel Search</a>
-<br>
-<br>
-<br>
-</p>
-</div> -->
+<!-- ################################# -->
