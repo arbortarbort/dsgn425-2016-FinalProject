@@ -20,23 +20,19 @@
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
-        <th>1Grant ID</th>
-        <th>2Research Field</th>
-
-        <th>3Research Need</th>
-        <th>4Grant Amount</th>
+        <th>Grant ID</th>
+        <th>Research Field</th>
+        <th>Research Need</th>
+        <th>Grant Amount</th>
         <th>Title</th>
         <th>Abstract</th>
-        <!-- <th>AAC</th> -->
         <th>Actions</th>
       </tr>
 
       <% @granttables.each do |granttable| %>
       <tr>
-        <td>1<%= granttable.grant_id %></td>
-        <td>2<%= granttable.field %></td>
-
-        
+        <td><%= granttable.grant_id %></td>
+        <td><%= granttable.field %></td>
 
         <% if granttable.research_need == 1 %>
         <td> Looking for funding($) </td>
@@ -48,7 +44,7 @@
         <td>I am looking for collaboration</td>
         <% end %>
 
-        <td>y<%= granttable.grant_amt %></td>
+        <td><%= granttable.grant_amt %></td>
         <td><%= granttable.title %></td>
         <td><%= granttable.abstract %></td>
         <td>

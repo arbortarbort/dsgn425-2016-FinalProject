@@ -23,7 +23,7 @@
         <label for="grant_id" class="control-label">
           Grant ID
         </label>
-        <input type="text" id="grant_id" name="grant_id" placeholder="Grant" class="form-control" value="<%= @granttable.grant_id %>">
+        <input type="text" id="grant_id" name="grant_id" placeholder="Grant" class="form-control" value="<%= rand(2...1000) %>" >
       </div>
 
       <!-- Label and input for field -->
@@ -53,19 +53,6 @@
       </div>
     </div>
     <!-- End: HM  -->
-
-
-    <!-- Label and input for field_id -->
-    <div class="form-group">
-      <br>
-      <br>
-      <label for="field_id" class="control-label">
-        Research Field ID
-      </label>
-      <input type="text" id="field_id" name="field_id" placeholder="Field ID" class="form-control" value="<%= @granttable.field_id %>">
-    </div>
-
-
 
 
 
